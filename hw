@@ -1,0 +1,15 @@
+function padStart(str, number, filler) {
+if ( isNaN(number) ) {
+alert ("Вы ввели не число");
+} else 
+	if (number < str.length) {
+  alert("Строка не может быть меньше исходной строки");
+  }
+  else {
+  const fillerCnt = Math.ceil((number - str.length) / filler.length);
+  const bigFiller = (new Array(fillerCnt).fill(filler)).join("");
+  const newStr = bigFiller.substr(0, (number - str.length)) + str;
+  return newStr;}
+}
+
+document.write(padStart("Stroka", 7, "Filler"));
